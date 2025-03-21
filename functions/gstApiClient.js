@@ -15,7 +15,7 @@ module.exports.fileGST = async (invoiceDetails) => {
   };
 
   try {
-    const response = await axios.post("", payload, {
+    const response = await axios.post(process.env.GST_API_URL, payload, {
       headers: {
         Authorization: `Bearer ${process.env.GST_API_KEY}`,
       },
